@@ -38,15 +38,15 @@ This will start the Python application in a Docker container with your local cod
 
 ## Running Tests
 
-To run the tests for this project, you can use the following command:
+To run the tests for this project with more verbose output, you can use the following command:
 
 ```bash
-python -m unittest src/test_main.py
+python -m unittest -v src/test_main.py
 ```
 
-This will run the `test_query_api` test case in the `test_main.py` file.
+This will run the `test_query_api` test case in the `test_main.py` file and display more detailed information about each test.
 
-To run the tests using Docker with mounted local code, use the following commands:
+To run the tests using Docker with mounted local code and more verbose output, use the following commands:
 
 1. Build the Docker image:
 
@@ -57,7 +57,7 @@ docker build -t my-python-app .
 2. Mount your local code and run the tests in the Docker container:
 
 ```bash
-docker run -it --rm -v $(pwd)/src:/app --name my-running-app my-python-app python -m unittest ./test_main.py
+docker run -it --rm -v $(pwd)/src:/app --name my-running-app my-python-app python -m unittest -v ./test_main.py
 ```
 
-This will run the `test_query_api` test case in the `test_main.py` file in a Docker container with your local code mounted.
+This will run the `test_query_api` test case in the `test_main.py` file in a Docker container with your local code mounted and display more detailed information about each test.
