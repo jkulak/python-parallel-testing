@@ -3,3 +3,4 @@ requests_mock
 pytest
 pytest-xdist
 pytest-durations
+pytest-json-report
