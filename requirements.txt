@@ -2,4 +2,4 @@ requests
 requests_mock
 pytest
 pytest-xdist
-pytest-duration
+pytest-durations
