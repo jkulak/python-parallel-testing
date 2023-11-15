@@ -35,3 +35,13 @@ docker run -it --rm -v $(pwd):/app --name my-running-app my-python-app
 ```
 
 This will start the Python application in a Docker container with your local code mounted. Any changes you make to your local code will be reflected in the Docker container.
+
+## Running Tests
+
+To run the tests for this project, you can use the following command:
+
+```bash
+python -m unittest src/test_main.py
+```
+
+This will run the `test_query_api` test case in the `test_main.py` file.
