@@ -1,5 +1,5 @@
 # Stage 1: Build
-FROM python:3.9 as builder
+FROM python:3.12 as builder
 
 WORKDIR /app
 
@@ -7,7 +7,7 @@ COPY requirements.txt .
 RUN pip install --user -r requirements.txt
 
 # Stage 2: Run
-FROM python:3.9-slim
+FROM python:3.12.0-slim
 
 WORKDIR /app
 
