@@ -45,3 +45,19 @@ python -m unittest src/test_main.py
 ```
 
 This will run the `test_query_api` test case in the `test_main.py` file.
+
+To run the tests using Docker with mounted local code, use the following commands:
+
+1. Build the Docker image:
+
+```bash
+docker build -t my-python-app .
+```
+
+2. Mount your local code and run the tests in the Docker container:
+
+```bash
+docker run -it --rm -v $(pwd):/app --name my-running-app my-python-app python -m unittest src/test_main.py
+```
+
+This will run the `test_query_api` test case in the `test_main.py` file in a Docker container with your local code mounted.
